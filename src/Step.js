@@ -138,9 +138,9 @@ export default class Step extends Component {
         )}
         </div>
         {active || completed ? (
-          <a href={href} onClick={onClick} style={ titleStyle }>{ title }</a>
+          <a href={href} onClick={onClick} style={ titleStyle }><span className={`stepper-index${active ? ' active' : ''}${completed ? ' completed' : ''}`}>{index + 1}</span><span className={`stepper-title${active ? ' active' : ''}${completed ? ' completed' : ''}`}> { title }</span></a>
         ) : (
-          <div style={ titleStyle }>{ title }</div>
+          <div style={ titleStyle }><span className="stepper-index">{index + 1}</span><span className='stepper-title'> { title }</span></div>
         )}
         { !first && <div style={ leftStyle }></div> }
         { !isLast && <div style={ rightStyle }></div> }

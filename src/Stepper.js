@@ -27,8 +27,8 @@ function Stepper({
   completeBorderStyle, activeBorderStyle, defaultBarColor, completeBarColor, lineMarginOffset, defaultBorderWidth
 }) {
   return (
-    <div style={ styles.root }>
-      <div style={ styles.stepper }>
+    <div style={ styles.root } className='stepper-root'>
+      <div style={ styles.stepper } className='stepper-stepper'>
         { steps.map((step, index) => (
           <Step
             key={index}
